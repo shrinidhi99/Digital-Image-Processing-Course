@@ -1,2 +1,2 @@
-# Digital-Image-Processing-Course
-Contains the practical learning of the DIP course
+# Digital Image Processing Course
+* Contains the practical learning of the DIP course
