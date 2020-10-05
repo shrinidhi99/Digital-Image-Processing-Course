@@ -29,4 +29,3 @@ mode(round(n6(:)));
 
 d = colfilt(k1, [7 7], 'sliding', @mean);
 mode(round(d(:)));
-imtool(d, []);
