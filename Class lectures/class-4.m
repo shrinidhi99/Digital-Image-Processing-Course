@@ -28,5 +28,5 @@ k1 = k;
 k1(k1 <= t) = 0;
 k1(k1 ~= 0) = 1;
 
-imtool(k, [])
-imtool(k1, [])
+imtool(k, []);
+imtool(k1, []);
