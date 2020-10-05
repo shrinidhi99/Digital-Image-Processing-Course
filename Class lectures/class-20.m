@@ -1,7 +1,7 @@
 /*
     * k: image
 */
-
+k = imread('cameraman.tif');
 k = double(k);
 k1 = k + 25 * randn(size(k));
 imtool(k1, []);
