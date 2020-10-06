@@ -36,12 +36,22 @@ Sr      Std          mse         psnr
 4       20           116.161     27.4801
 5       25           139.908     26.6723
 
+### Implementation 3:
 
+* Image used: Brain grayscale
+* Method: A re-implementation of a proposed implementation but without including loops. Aim is to reduce time complexity.
+
+Sr      Std          mse         psnr
+1       5            25.9649     33.9869
+2       10           39.3544     32.1808
+3       15           90.5009     28.5642
+4       20           201.179     25.0949
+5       25           364.823     22.5099
 
 ### References:
 
 https://www.iro.umontreal.ca/~mignotte/IFT6150/Articles/Buades-NonLocal.pdf
-https://www.hindawi.com/journals/mpe/2018/8593934/	[interested]
+https://www.hindawi.com/journals/mpe/2018/8593934/
 https://link.springer.com/chapter/10.1007/978-3-642-24999-0_5
 https://www.researchgate.net/publication/329038202_Overview_of_image_noise_reduction_based_on_non-local_mean_algorithm
 https://www.researchgate.net/publication/4156453_A_non-local_algorithm_for_image_denoising
