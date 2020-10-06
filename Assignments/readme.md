@@ -24,6 +24,17 @@ Sr      Std          mse         psnr
 4       20           41.3700     31.9639
 5       25           52.7390     30.9094
 
+### Implementation 2:
+
+* Image used: Brain grayscale
+* Method: Patch size and half window size, number of neighbours
+
+Sr      Std          mse         psnr
+1       5            12.5787     37.1344
+2       10           60.7483     30.2954
+3       15           96.7305     28.2751
+4       20           116.161     27.4801
+5       25           139.908     26.6723
 
 
 
