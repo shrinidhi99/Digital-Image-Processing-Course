@@ -15,7 +15,9 @@ k4 = k + 20 * randn(size(k));
 k5 = k + 25 * randn(size(k));
 
 imtool(k1, []);
+tic;
 denoised_1 = simple_nlm(k1,t,f,h1,h2,selfsim);
+toc;
 imtool(denoised_1, []);
 d1 = (k - denoised_1).^2;
 mse1 = mean(d1(:));
@@ -23,7 +25,9 @@ rms1 = sqrt(mse1);
 psnr1 = 20 * log10(255/rms1);
 
 imtool(k2, []);
+tic;
 denoised_2 = simple_nlm(k2,t,f,h1,h2,selfsim);
+toc;
 imtool(denoised_2, []);
 d2 = (k - denoised_2).^2;
 mse2 = mean(d2(:));
@@ -31,7 +35,9 @@ rms2 = sqrt(mse2);
 psnr2 = 20 * log10(255/rms2);
 
 imtool(k3, []);
+tic;
 denoised_3 = simple_nlm(k3,t,f,h1,h2,selfsim);
+toc;
 imtool(denoised_3, []);
 d3 = (k - denoised_3).^2;
 mse3 = mean(d3(:));
@@ -39,7 +45,9 @@ rms3 = sqrt(mse3);
 psnr3 = 20 * log10(255/rms3);
 
 imtool(k4, []);
+tic;
 denoised_4 = simple_nlm(k4,t,f,h1,h2,selfsim);
+toc;
 imtool(denoised_4, []);
 d4 = (k - denoised_4).^2;
 mse4 = mean(d4(:));
@@ -47,7 +55,9 @@ rms4 = sqrt(mse4);
 psnr4 = 20 * log10(255/rms4);
 
 imtool(k5, []);
+tic;
 denoised_5 = simple_nlm(k5,t,f,h1,h2,selfsim);
+toc;
 imtool(denoised_5, []);
 d5 = (k - denoised_5).^2;
 mse5 = mean(d5(:));

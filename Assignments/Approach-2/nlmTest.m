@@ -21,8 +21,10 @@ sigma = 5;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 
 img_n_1 = img + randn(size(img)) * sigma;
+tic;
 img_f_nn_1 = nlm(img_n_1, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
-    
+toc;
+
 % errors
 mse_n_1 = mean((img(:)-img_n_1(:)).^2);
 mse_nn_1 = mean((img(:)-img_f_nn_1(:)).^2);
@@ -36,8 +38,10 @@ imtool(img_f_nn_1, []);
 sigma = 10;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_2 = img + randn(size(img)) * sigma;
+tic;
 img_f_nn_2 = nlm(img_n_2, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
-    
+toc;
+
 % errors
 mse_n_2 = mean((img(:)-img_n_2(:)).^2);
 mse_nn_2 = mean((img(:)-img_f_nn_2(:)).^2);
@@ -52,8 +56,10 @@ sigma = 15;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 
 img_n_3 = img + randn(size(img)) * sigma;
+tic;
 img_f_nn_3 = nlm(img_n_3, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
-    
+toc;
+
 % errors
 mse_n_3 = mean((img(:)-img_n_3(:)).^2);
 mse_nn_3 = mean((img(:)-img_f_nn_3(:)).^2);
@@ -67,8 +73,10 @@ imtool(img_f_nn_3, []);
 sigma = 20;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_4 = img + randn(size(img)) * sigma;
+tic;
 img_f_nn_4 = nlm(img_n_4, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
-    
+toc;
+
 % errors
 mse_n_4 = mean((img(:)-img_n_4(:)).^2);
 mse_nn_4 = mean((img(:)-img_f_nn_4(:)).^2);
@@ -82,8 +90,10 @@ imtool(img_f_nn_4, []);
 sigma = 25;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_5 = img + randn(size(img)) * sigma;
+tic;
 img_f_nn_5 = nlm(img_n_5, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
-    
+toc;
+
 % errors
 mse_n_5 = mean((img(:)-img_n_5(:)).^2);
 mse_nn_5 = mean((img(:)-img_f_nn_5(:)).^2);

@@ -7,32 +7,41 @@ k3 = k + 15 * randn(size(k));
 k4 = k + 20 * randn(size(k));
 k5 = k + 25 * randn(size(k));
 
-
+tic;
 y1 = NLM(k, k1);
+toc;
 d1 = (uint8(k) - y1).^2;
 mse1 = mean(d1(:));
 rms1 = sqrt(mse1);
 psnr1 = 20 * log10(255/rms1);
 
+tic;
 y2 = NLM(k, k2);
+toc;
 d2 = (uint8(k) - y2).^2;
 mse2 = mean(d2(:));
 rms2 = sqrt(mse2);
 psnr2 = 20 * log10(255/rms2);
 
+tic;
 y3 = NLM(k, k3);
+toc;
 d3 = (uint8(k) - y3).^2;
 mse3 = mean(d3(:));
 rms3 = sqrt(mse3);
 psnr3 = 20 * log10(255/rms3);
 
+tic;
 y4 = NLM(k, k4);
+toc;
 d4 = (uint8(k) - y4).^2;
 mse4 = mean(d4(:));
 rms4 = sqrt(mse4);
 psnr4 = 20 * log10(255/rms4);
 
+tic;
 y5 = NLM(k, k5);
+toc;
 d5 = (uint8(k) - y5).^2;
 mse5 = mean(d5(:));
 rms5 = sqrt(mse5);

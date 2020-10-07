@@ -47,7 +47,7 @@ function [output]=simple_nlm(input,t,f,h1,h2,selfsim)
  V = exp(-sum(diff.*diff,2)/h2^2); 
  W = sparse(edges(:,1), edges(:,2), V, s, s);
  
- % Make matrix symetric and set diagonal elements
+ % Make matrix symmetric and set diagonal elements
  if selfsim > 0
     W = W + W' + selfsim*speye(s);
  else
