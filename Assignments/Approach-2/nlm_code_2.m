@@ -22,34 +22,34 @@ h = 0.3 * sigma^2;          % nlm filtering parameter
 
 img_n_1 = img + randn(size(img)) * sigma;
 tic;
-img_f_nn_1 = nlm(img_n_1, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
+denoised_1 = nlm(img_n_1, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
 toc;
 
 % errors
 mse_n_1 = mean((img(:)-img_n_1(:)).^2);
-mse_nn_1 = mean((img(:)-img_f_nn_1(:)).^2);
+mse_nn_1 = mean((img(:)-denoised_1(:)).^2);
 rms1 = sqrt(mse_nn_1);
 psnr1 = 20 * log10(255/rms1);
 
 imtool(img_n_1, []);
-imtool(img_f_nn_1, []);
+imtool(denoised_1, []);
 
 % standard deviation = 10
 sigma = 10;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_2 = img + randn(size(img)) * sigma;
 tic;
-img_f_nn_2 = nlm(img_n_2, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
+denoised_2 = nlm(img_n_2, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
 toc;
 
 % errors
 mse_n_2 = mean((img(:)-img_n_2(:)).^2);
-mse_nn_2 = mean((img(:)-img_f_nn_2(:)).^2);
+mse_nn_2 = mean((img(:)-denoised_2(:)).^2);
 rms2 = sqrt(mse_nn_2);
 psnr2 = 20 * log10(255/rms2);
 
 imtool(img_n_2, []);
-imtool(img_f_nn_2, []);
+imtool(denoised_2, []);
 
 % standard deviation = 15
 sigma = 15;                % noise std
@@ -57,51 +57,51 @@ h = 0.3 * sigma^2;          % nlm filtering parameter
 
 img_n_3 = img + randn(size(img)) * sigma;
 tic;
-img_f_nn_3 = nlm(img_n_3, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
+denoised_3 = nlm(img_n_3, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
 toc;
 
 % errors
 mse_n_3 = mean((img(:)-img_n_3(:)).^2);
-mse_nn_3 = mean((img(:)-img_f_nn_3(:)).^2);
+mse_nn_3 = mean((img(:)-denoised_3(:)).^2);
 rms3 = sqrt(mse_nn_3);
 psnr3 = 20 * log10(255/rms3);
 
 imtool(img_n_3, []);
-imtool(img_f_nn_3, []);
+imtool(denoised_3, []);
 
 % standard deviation = 20
 sigma = 20;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_4 = img + randn(size(img)) * sigma;
 tic;
-img_f_nn_4 = nlm(img_n_4, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
+denoised_4 = nlm(img_n_4, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
 toc;
 
 % errors
 mse_n_4 = mean((img(:)-img_n_4(:)).^2);
-mse_nn_4 = mean((img(:)-img_f_nn_4(:)).^2);
+mse_nn_4 = mean((img(:)-denoised_4(:)).^2);
 rms4 = sqrt(mse_nn_4);
 psnr4 = 20 * log10(255/rms4);
 
 imtool(img_n_4, []);
-imtool(img_f_nn_4, []);
+imtool(denoised_4, []);
 
 % standard deviation = 25
 sigma = 25;                % noise std
 h = 0.3 * sigma^2;          % nlm filtering parameter
 img_n_5 = img + randn(size(img)) * sigma;
 tic;
-img_f_nn_5 = nlm(img_n_5, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
+denoised_5 = nlm(img_n_5, halfPatchSize, windowHalfSearchSize, N_n, sigma, h);
 toc;
 
 % errors
 mse_n_5 = mean((img(:)-img_n_5(:)).^2);
-mse_nn_5 = mean((img(:)-img_f_nn_5(:)).^2);
+mse_nn_5 = mean((img(:)-denoised_5(:)).^2);
 rms5 = sqrt(mse_nn_5);
 psnr5 = 20 * log10(255/rms5);
 
 imtool(img_n_5, []);
-imtool(img_f_nn_5, []);
+imtool(denoised_5, []);
 
 
 function img_f = nlm(img_n, halfPatchSize, windowHalfSearchSize, N_n, sigma, h)
