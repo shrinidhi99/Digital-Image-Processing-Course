@@ -17,36 +17,39 @@
 * Image used: Brain grayscale
 * Method: Eucledian distance
 
-Sr      Std          mse         psnr
-1       5            12.0409     37.3241
-2       10           15.8931     36.1187
-3       15           26.7327     33.8603
-4       20           41.3700     31.9639
-5       25           52.7390     30.9094
+| Sr | Std |  mse    |  psnr   |
+|--- | ----| --------| ------- |
+| 1  |  5  | 12.0409 | 37.3241 |
+| 2  |  10 | 15.8931 | 36.1187 |
+| 3  |  15 | 26.7327 | 33.8603 |
+| 4  |  20 | 41.3700 | 31.9639 |
+| 5  |  25 | 52.7390 | 30.9094 |
 
 ### Implementation 2:
 
 * Image used: Brain grayscale
 * Method: Patch size and half window size, number of neighbours
 
-Sr      Std          mse         psnr
-1       5            12.5787     37.1344
-2       10           60.7483     30.2954
-3       15           96.7305     28.2751
-4       20           116.161     27.4801
-5       25           139.908     26.6723
+| Sr | Std |  mse    |  psnr   |
+|--- | ----| --------| ------- |
+| 1  |  5  | 12.5787 | 37.1344 |
+| 2  |  10 | 60.7483 | 30.2954 |
+| 3  |  15 | 96.7305 | 28.2751 |
+| 4  |  20 | 116.161 | 27.4801 |
+| 5  |  25 | 139.908 | 26.6723 |
 
 ### Implementation 3:
 
 * Image used: Brain grayscale
 * Method: A re-implementation of a proposed implementation but without including loops. Aim is to reduce time complexity.
 
-Sr      Std          mse         psnr
-1       5            25.9649     33.9869
-2       10           39.3544     32.1808
-3       15           90.5009     28.5642
-4       20           201.179     25.0949
-5       25           364.823     22.5099
+| Sr | Std |  mse    |  psnr   |
+|--- | ----| --------| ------- |
+| 1  |  5  | 25.9649 | 33.9869 |
+| 2  |  10 | 39.3544 | 32.1808 |
+| 3  |  15 | 90.5009 | 28.5642 |
+| 4  |  20 | 201.179 | 25.0949 |
+| 5  |  25 | 364.823 | 22.5099 |
 
 ### References:
 
