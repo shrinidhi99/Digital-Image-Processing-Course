@@ -9,7 +9,7 @@
 /*
     * Dilation
 */
-k = imread('circle.jpg');
+k = imread('circle.gif');
 imtool(k, []);
 SE = strel('disk', 5, 0);
 D = imdilate(k, SE);
@@ -21,7 +21,7 @@ imtool((D - k), []);
     * Erosion
 */
 
-k = imread('circle.jpg');
+k = imread('circle.gif');
 imtool(k, []);
 SE = strel('square', 5);
 E = imerode(k, SE);
@@ -33,10 +33,11 @@ imtool(E, []);
     * Use erosion followed by connected components
 */
 
-k = imread('count-circle.jpg');
+k = imread('stones.jpg');
+k = rgb2gray(k);
+k = I2B(k);
 SE = strel('square', 7);
-E = imerode(E, SE);
+E = imerode(k, SE);
 imtool(E, []);
 [L, n] = bwlabel(E, 8);
 imtool(L, []);
-n // number of connected components
