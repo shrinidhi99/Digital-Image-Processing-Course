@@ -2,25 +2,25 @@
     * point operation
 */
 k = imread('cameraman.tif');
-imtool(k, [])
-max_val = max(k(:))
+imtool(k, []);
+max_val = max(k(:));
 k1 = max_val - k;
-imtool(k1, [])
+imtool(k1, []);
 
 /*
     * Fourier transform
 */
 f = fftshift(fft2(k));
-imtool(abs(f), [])
-imtool(k, [])
+imtool(abs(f), []);
+imtool(k, []);
 k2 = abs(f);
-imtool(log(k2 + 1), [])
+imtool(log(k2 + 1), []);
 
 /*
     * binarize an image
 */
-min_val = min(k(:))
-max_val = max(k(:))
+min_val = min(k(:));
+max_val = max(k(:));
 
 t = 150;
 

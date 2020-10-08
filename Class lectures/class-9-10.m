@@ -28,8 +28,8 @@ h = fspecial('sobel');
 R2 = conv2(k, h, 'valid');
 imtool(abs(R2), []);
 
-f1 = ones(3, 3) *. 1/9;
-f2 = ones(1, 3) *. 1/3;
+f1 = ones(3, 3)*.1/9;
+f2 = ones(1, 3)*.1/3;
 
 imtool(R, []);
 figure, surf(h);

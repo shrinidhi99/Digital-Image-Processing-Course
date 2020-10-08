@@ -5,8 +5,8 @@
     * program is not shown
 */
 
-k = imread('car3.jpg');
-imtool(k, [])
+k = imread('number-plate.jpg');
+imtool(k, []);
 
 /*
     * Experiment 2
@@ -15,9 +15,9 @@ imtool(k, [])
 */
 
 k = imread('cameraman.tif');
-imtool(k, [])
-k(100, 100)
+imtool(k, []);
+k(100, 100);
 
 f = fftshift(fft2(k));
-imtool(log10(real(f)), [])
-imtool(k, [])
+imtool(log10(real(f)), []);
+imtool(k, []);
